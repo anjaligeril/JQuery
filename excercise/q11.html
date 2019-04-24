@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script>
+        //   convert a string into camel case.
+        function camelCasing(str) {
+            var str1=str.split(" ");
+            var leng=str1.length;
+            alert(leng);
+            var str3=[];
+            for(var i=1;i<leng;i++){
+                var str2=str1[i].charAt(0).toUpperCase()+str1[i].slice(1,str1[i].length);
+                str3=str3.concat(str2);
+            }
+            var output=str1[0].concat(str3);
+            alert(output);
+        }
+        var string=("hello world");
+        camelCasing(string);
+    </script>
+</head>
+<body>
+</body>
+</html>

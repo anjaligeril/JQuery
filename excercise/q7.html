@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script>
+        //function to parameterize a string.
+
+        function parameterize(str) {
+
+            var str1 = str.toLowerCase();
+            var str2 = "";
+            for (var i = 0; i < str1.length; i++) {
+                if (str1[i] == " ") {
+                    str2 = str2 + "-";
+                } else {
+                    str2 = str2 + str1[i];
+                }
+            }
+            alert(str2);
+        }
+        var string=("Hai How are You")
+        parameterize(string);
+        </script>
+</head>
+<body>
+
+</body>
+</html>

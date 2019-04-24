@@ -1,0 +1,30 @@
+// Uncapitalize the first letter of each word of a string.
+
+
+
+<html>
+<head>
+    <script>
+        // Uncapitalize?
+        function uncapitalizeWord(str) {
+            var str1=str.charAt(0).toLowerCase();
+            var str2=str1+str.slice(1,str.length);
+            for(var i=0;i<str2.length;i++){
+                if(str2.charAt(i)==" "){
+                    var x=str2.charAt(i+1);
+                    var y=str2.charAt(i+1).toLowerCase();
+                    alert(x);
+                    alert(y);
+                    var str3=str2.replace(x,y)
+                    i++;
+                }
+
+            }
+            alert(str3);
+        }
+        var string=("The Quick Brown Fox Jumps")
+        uncapitalizeWord(string);
+    </script>
+</head>
+<body>
+</body>

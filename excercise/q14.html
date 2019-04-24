@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script>
+        //add word to a position
+        function insert(str,word,pos) {
+           var firstPart=str.slice(0,pos-1);
+           var secondPart=str.slice(pos-1,str.length);
+          alert(firstPart) ;
+          alert(secondPart);
+          var str1=firstPart.concat(word);
+          var str2=str1.concat(secondPart);
+          alert(str2);
+
+        }
+        var string=("Hai are you")
+        insert(string,"how",2);
+    </script>
+</head>
+<body>
+</body>
+</html>

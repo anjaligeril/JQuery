@@ -1,0 +1,24 @@
+
+
+<html>
+<head>
+    <script>
+        //if a string ends with specified suffix
+        function suffix(str,word) {
+           var length=str.length;
+           var wordLength=word.length;
+            var str1=str.substring(length-wordLength,length);
+            alert(str1);
+           if(str1==word){
+               alert("the string ends with "+ word);
+           }else{
+               alert("the string not ends with "+ word);
+           }
+        }
+        var string=("The quick brown fox jumps")
+        suffix(string,"jumps");
+    </script>
+</head>
+<body>
+</body>
+</html>

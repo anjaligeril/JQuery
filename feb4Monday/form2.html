@@ -1,0 +1,64 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css">
+    <script>
+        $(document).ready(()=> {
+            $('#form').validate({
+                rules: {
+                    firstName: {
+                        required: true,
+                    },
+                    lastName: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        required: true,
+                        minlength:10,
+                        maxlength:10,
+                        number:true
+                    }
+
+                },
+                submitHandler: function () {
+                    $.alert({
+                        title: 'Alert!',
+                        content: 'Thank you for submitting!!!',
+                    });
+                    return false;
+                }
+            });
+            $( "#datepicker" ).datepicker();
+        });
+
+    </script>
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    FirstName:<br><input type="text" name="firstName" >
+    <br><br>
+    Last Name:<br><input type="text" name="lastName" >
+    <br><br>
+    Email Id:<br> <input type="text" name="email" >
+    <br><br>
+    Phone:<br><input type="text" name="phone" >
+    <br><br>
+    <p>DOB: <br><input type="text" id="datepicker"></p>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script>
+        // count the occurrence of a substring in a string.
+        function chunks(str,word) {
+            str=str.toLowerCase();
+            var str1=str.split(" ");
+            alert(str1);
+            var counter=0;
+            for(i=0;i<str1.length;i++){
+                if(str1[i]==word){
+                    counter++;
+                }
+            }
+            alert(counter);
+        }
+        var string=("The quick brown fox jumps over the lazy dog")
+        chunks(string,"the");
+    </script>
+</head>
+<body>
+</body>
+</html>

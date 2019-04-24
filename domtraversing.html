@@ -1,0 +1,79 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <style>
+        #animals{
+            border:3px solid black;
+        }
+        .category{
+            border:1px solid black;
+            margin-left: 20px;
+        }
+
+        .pets, .wild {
+            margin-left:30px;
+            background-color:yellow;
+            margin-top:3px;
+            margin-bottom:5px;
+
+        }
+
+    </style>
+
+
+    <script>
+
+
+        $(document).ready(function(){
+
+            //var result = $('#animals  .creature');
+
+
+            //var result = $('#animals').children('.creature').first().next();
+            var result = $('#animals').children('.creature').first().children().first().next().next();
+
+            //console.log(result);
+            console.log(result);
+        });
+
+    </script>
+
+</head>
+
+<body>
+<div id="animals" class="creature category">
+    Animals
+    <div class="creature category">
+        Mammals
+
+        <div class="pets"> Dog </div>
+        <div class="pets" id="cat"> Cats </div>
+
+        <div class="wild">Lion </div>
+        <div class="wild"> Tiger </div>
+
+    </div>
+
+
+    <div class="creature category">
+        Reptiles
+
+        <div class="pets"> Snakes </div>
+        <div class="pets" > Lizards </div>
+
+
+        <div class="wild creature"> Crocodile </div>
+
+
+
+
+    </div>
+
+    <div class="marine"> Marine Animals </div>
+</div>
+
+
+</body>
+</html>

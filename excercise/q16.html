@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script>
+        // truncates a string if it is longer than the specified number of characters.
+        function crop(str,no) {
+            alert(str);
+            alert(no);
+            var length=str.length;
+            if(length>no){
+                var str1=str.slice(0,no);
+                alert(str1+" ... ");
+            }
+
+        }
+        var string=("Hai how are you")
+        crop(string,5);
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <script>
+        $(document).ready(()=> {
+            $('#form').validate({
+                rules: {
+                    firstName: {
+                        required: true,
+                    },
+                    lastName: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        required: true,
+                        minLength:10,
+                        maxLength:10,
+                        number:true
+                    }
+
+                },
+                submitHandler: function (form) {
+                    alert('Thank you for submitting the info..');
+                    return false;
+                }
+            });
+         });
+
+    </script>
+    <style>
+        .error{
+           color:red;
+        }
+    </style>
+</head>
+<body>
+
+<form id="form">
+    First name:<br>
+    <input type="text" name="firstName" >
+    <br><br>
+    Last name:<br>
+    <input type="text" name="lastName" >
+    <br><br>
+    Email Id:<br>
+    <input type="text" name="email" >
+    <br><br>
+    Phone:<br>
+    <input type="text" name="phone" >
+    <br><br>
+    <input class="submit" type="submit" value="Submit">
+</form>
+</body>
+</html>

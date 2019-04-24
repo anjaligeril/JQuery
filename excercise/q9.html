@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script>
+        //capitalize the first letter of each word in a string.
+        function capitalizeWord(str) {
+            var length=str.length;
+            for(var i=0;i<length;i++){
+                if(str.charAt(i)==" "){
+                    str=str.replace(str.charAt(i+1),str.charAt(i+1).toUpperCase())
+                }
+                            }
+            alert(str);
+
+        }
+        var string=("anjali elizabeth joseph")
+        capitalizeWord(string);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

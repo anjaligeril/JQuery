@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script>
+        //co humanized number (Formats a number to a human-readable string.) with the correct suffix such as 1st, 2nd, 3rd or 4th.
+        function humanize(no) {
+
+            var a=no%10;
+            switch (a) {
+                case 1:alert(no+"st");
+                break;
+                case 2:alert(no+"nd");
+                break;
+                case 3:alert(no+"rd");
+                break;
+                default:alert(no+"th");
+            }
+        }
+        var no=8;
+        humanize(no);
+    </script>
+</head>
+<body>
+</body>
+</html>

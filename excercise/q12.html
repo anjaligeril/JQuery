@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script>
+        //   uncamelize a string
+        function camelCasing(str) {
+            var leng=str.length;
+            var y=[];
+            var j=0;
+
+            for(var i=1;i<leng;i++){
+                var x=str[i].toUpperCase();
+                if(x==str[i]){
+                   y[j]=i;
+                   j++;
+                }
+            }
+            var a=y[0]
+            var output=str.substring(0,a)+" ";
+            alert(output);
+            for( var z=0;z<y.length;z++){
+                var output=output.concat(str.substring(y[z],y[z+1]));
+               var output=output.concat(" ");
+            }
+            alert(output);
+
+        }
+        var string=("helloWorldHow");
+        camelCasing(string);
+    </script>
+</head>
+<body>
+</body>
+</html>

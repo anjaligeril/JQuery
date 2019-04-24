@@ -1,0 +1,21 @@
+
+<html>
+<head>
+    <script>
+        // case-insensitive search.
+        function insensitive(str,word) {
+            var str1=str.toLowerCase();
+            var word1=word.toLowerCase();
+            if(str1.includes(word1)){
+                alert("success");
+            }else{
+                alert("failed");
+            }
+        }
+        var string=("The quick brown fox jumps")
+        insensitive(string,"Quick");
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script>
+        //  a string which has lower and upper case letters as a parameter and converts upper case letters to lower case, and lower case letters to upper case.
+        function upperLower(str) {
+            var str1=str.split("");
+            for(var i=0;i<str1.length;i++){
+                var x=str1[i].toLowerCase();
+                if(x==str1[i]){
+                    str1[i]=str1[i].toUpperCase();
+                }else{
+                    str1[i]=str1[i].toLowerCase();
+                }
+            }
+            alert(str1);
+        }
+        var string=("aAbBcC");
+        upperLower(string);
+    </script>
+</head>
+<body>
+</body>
+</html>

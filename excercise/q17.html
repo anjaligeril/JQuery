@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script>
+        // chop a string into chunks of a given length.
+        function chunks(str,lenchunk) {
+            var noWords=str.length/lenchunk;
+            var str1=[];
+            for (let i = 0, o = 0; i < noWords; ++i, o += lenchunk) {
+                str1[i] = str.substr(o, lenchunk)
+            }
+
+            alert(str1);
+
+        }
+        var string=("Haihowareyou")
+        chunks(string,2);
+    </script>
+</head>
+<body>
+</body>
+</html>

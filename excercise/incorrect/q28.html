@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <script>
+        // convert Hexadecimal to ASCII format.
+        function ascii(str) {
+            str = str.toString();
+            var length=str.length;
+            var ascii=[];
+            var j=0;
+            for(var i=0;i<length;i+=2){
+               ascii[j]= str.slice(i,i+2);
+               j++;
+            }
+alert(ascii);
+            len=ascii.length;
+alert(ascii);
+            for(i=0;i<len;i++){
+                console.log(String.fromCharCode(parseInt(ascii[i]),16));
+            }
+        }
+        var string=("3132")
+        ascii(string);
+    </script>
+</head>
+<body>
+</body>
+</html>
